@@ -29,7 +29,7 @@ checkBtn.addEventListener('click', () => {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
     }
-    // When the guess is too high
+    // When the guess is wrong
   } else if (guessInput !== secretNumber) {
     if (score > 1) {
       displayMessage(guessInput > secretNumber ? '📈 Too high!' : '📉 Too low!');
