@@ -43,6 +43,7 @@ checkBtn.addEventListener('click', () => {
   }
 });
 
+// Reset the game
 resetBtn.addEventListener('click', () => {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
