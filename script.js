@@ -20,10 +20,10 @@ checkBtn.addEventListener('click', () => {
 
     // When player wins
   } else if (guessInput === secretNumber) {
-      displayMessage('🥳Correct Number!');
-      document.querySelector('.number').textContent = secretNumber;
-      document.body.style.background = '#60b347';
-      document.querySelector('.number').style.width = '30rem';
+    displayMessage('🥳Correct Number!');
+    document.querySelector('.number').textContent = secretNumber;
+    document.body.style.background = '#60b347';
+    document.querySelector('.number').style.width = '30rem';
 
     if (score > highscore) {
       highscore = score;
@@ -31,14 +31,14 @@ checkBtn.addEventListener('click', () => {
     }
     // When the guess is too high
   } else if (guessInput !== secretNumber) {
-    if (score > 0) {
+    if (score > 1) {
       displayMessage(guessInput > secretNumber ? '📈 Too high!' : '📉 Too low!');
       score--;
       document.querySelector('.score').textContent = score;
     } else {
       displayMessage('😔 You lost the game!');
       document.querySelector('.score').textContent = 0;
-      document.body.style.background = 'red';
+      document.body.style.background = '#FF0000';
     }
   }
 });
